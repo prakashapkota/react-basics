@@ -1,53 +1,24 @@
 import React from "react";
 import { render } from "react-dom";
+import { browserHistory} from "react-router";
+import {BrowserRouter as Router, Route, Link, IndexRoute} from "react-router-dom";
 
-import { Header } from "./components/Header";
-import { Home } from "./components/Home";
+import {Root} from "./components/Root";
+import {Home} from "./components/Home";
+import {User} from "./components/User";
 
 class App extends React.Component {
-	constructor(){
-		super();
-		this.state= {
-			homeLink: "Home"
-		};
-	}
-
-	onChangeLinkName(newName){
-		this.setState({
-			homeLink: newName
-		})
-	}
-
-	onGreet(){
-		alert('Hello');
-	};
-	render() {
-		var user = {
-			name: "Anna",
-			hobbies: ["Sports", "Music"]
-		};
-
-		return(
-			<div className="container">
-				<div className="row">
-					<div className="col-xs-10 col-xs-offset-1">
-						<Header homeLink={this.state.homeLink} />
-					</div>
-				</div>
-				<div className="row">
-					<div className="col-xs-10 col-xs-offset-1">
-						<Home 
-							name={"Max"} 
-							initialAge={27} 
-							user={user} 
-							greet={this.onGreet}
-							changeLink={this.onChangeLinkName.bind(this)}
-						/>
-					</div>
-				</div>
-			</div>
-		);
-	}
+  render() {
+    return (
+      <Router history={browserHistory}>
+        	<Root>
+        		<Route exact path="/" component={Home}/>
+        		<Route path="/home" component={Home}/>
+        		<Route path="/user/:id" component={User}/>
+        	</Root>
+      </Router>
+    )
+  }
 }
 
 render(<App/>, window.document.getElementById('app'));
