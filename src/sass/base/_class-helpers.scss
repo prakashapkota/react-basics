@@ -1,0 +1,47 @@
+/* ------------------------------------------------------ */
+/* POSITION
+/* ------------------------------------------------------ */
+
+.floatL { float: left; }
+.floatR { float: right; }
+
+/* ------------------------------------------------------ */
+/* Box-Model
+/* ------------------------------------------------------ */
+
+.clear { clear: both; }
+.nomargin { margin: 0; }
+.table { display: table; }
+.cell { display: table-cell; }
+
+/* ------------------------------------------------------ */
+/* Typography
+/* ------------------------------------------------------ */
+
+.cap { text-transform: uppercase; }
+
+.white { color: white; }
+.color-grey{
+	color: #666;
+}
+.color-orange{
+    color: orange;
+}
+.color-green{
+    color: green;
+}
+.error { color: red; }
+.alignR { text-align: right; }
+.alignL { text-align: left; }
+.center { text-align: center; }
+
+/* ------------------------------------------------------ */
+/* Visual
+/* ------------------------------------------------------ */
+
+.hide { display: none; }
+.bgmain { background-color: #333; }
+.bgwhite { background-color: white; }
+.cover { background-size: cover; }
+
+

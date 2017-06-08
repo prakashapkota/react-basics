@@ -1,0 +1,97 @@
+/* ------------------------------------------------------ */
+/* Base styles: projects defaults
+/* ------------------------------------------------------ */
+
+html, body {
+    
+    /* @include bp($jon) {
+        font-size: 15px;
+    }
+    @include bp($robb) {
+        font-size: 14px;
+    }
+    @include bp($sansa) {
+        font-size: 17px;
+    } */
+    background: #eaeaea;
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+    outline: none;
+    font-family: arial;
+    color: #000;
+    -webkit-font-smoothing: antialiased;
+
+    font-size: 14px;
+
+}
+
+img{
+    max-width: 100%;
+}
+a{
+    text-decoration: none;
+}
+
+h1{
+    color: #000;
+    margin: 0 0 30px;
+    line-height: 1em;
+}
+h2 {
+    color: #000
+}
+
+
+h3 {
+    color: #333;
+    margin: 0 0 30px;
+    strong {
+        text-transform: none;
+    }
+}
+
+h5 {
+    color: white;
+    margin: 0 0 0px;
+    text-transform: none;
+}
+
+p {
+    margin-bottom:10px;
+    color: #333;
+    line-height: 1em;
+}
+
+sup {
+    vertical-align: super;
+    font-size: smaller;
+    font-size: 0.5em;
+    margin-left:3px;
+}
+
+br {
+    color: white; /* IE8 fix */
+}
+
+a {
+    color: #333;
+}
+
+input, select{
+    border: 0;
+    outline: 0;
+    font-size: 1em;
+}
+
+label{
+    cursor: pointer;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.25),
+only screen and (min-device-pixel-ratio: 1.25),
+only screen and (min-resolution: 200dpi),
+only screen and (min-resolution: 1.25dppx) {
+    -webkit-font-smoothing: subpixel-antialiased;
+}
